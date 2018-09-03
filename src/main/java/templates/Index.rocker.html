@@ -1,10 +1,24 @@
-@args (String title, String content)
-<html lang="en-US">
-<head>
-    <meta charset="UTF-8"/>
-    <title>@title</title>
-</head>
-<body>
-@content
-</body>
-</html>
+@import java.util.List
+@args (String name, List authors, boolean isOnline)
+<div>Welcome, @name, to rocker + spring boot2 test page</div>
+
+<div>
+    Authors:
+    <ul>
+    @for(author: authors) {
+        <li>@author</li>
+    }
+    </ul>
+</div>
+<div>
+    @with? (String supporter = authors.get(0)) {
+        Status:
+        @if(isOnline){
+            @supporter is Online
+        } else {
+            @supporter is Offline
+        }
+    } else {
+        No supporters online
+    }
+</div>

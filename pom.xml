@@ -30,6 +30,13 @@
             <version>4.12</version>
             <scope>test</scope>
         </dependency>
+<!--        Not working (ClassNot)
+            <dependency>
+            <groupId>com.fizzed</groupId>
+            <artifactId>rocker-compiler</artifactId>
+            <version>${rocker.version}</version>
+            <scope>provided</scope>
+        </dependency>-->
     </dependencies>
 
     <dependencyManagement>

@@ -1,0 +1,11 @@
+@import java.util.List
+@args (String title, String name, List authors, boolean isOnline)
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8"/>
+    <title>@title</title>
+</head>
+<body>
+@templates.Index.template(name, authors, isOnline)
+</body>
+</html>
